@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.chunzhmo.apptoapp",
+    "sha256_cert_fingerprints":
+    ["E2:47:B7:9D:90:49:32:CA:63:75:CF:AA:30:CE:94:2D:14:50:04:47:EB:38:92:CE:93:65:83:3A:BA:65:01:F1"]
+  }
+}]
