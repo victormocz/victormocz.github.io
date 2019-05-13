@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7TTUNQY6BA.com.amazon.alexa.App2App",
+        "paths": [
+          "/alexa_authcode/*",
+          "/client_authcode/*"
+        ]
+      }
+    ]
+  }
+}
