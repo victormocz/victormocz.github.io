@@ -20,6 +20,7 @@
     <script>
         $(function () {
           var socket = io('https://www.chunzhangmo.com:9999');
+          io.set('origins', '*:*');
           $('form').submit(function(e){
             e.preventDefault(); // prevents page reloading
             socket.emit('chat message', $('#m').val());
