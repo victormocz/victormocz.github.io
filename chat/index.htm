@@ -19,8 +19,14 @@
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
         $(function () {
-          var socket = io('https://www.chunzhangmo.com:9999');
-          io.set('origins', '*:*');
+        	var connectionOptions =  {
+            "force new connection" : true,
+            "reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
+            "timeout" : 10000, //before connect_error and connect_timeout are emitted.
+            "transports" : ["websocket"]
+        };
+          var socket = io.connect('https://www.chunzhangmo.com:9999');// ('https://www.chunzhangmo.com:9999', connectionOptions);
+
           $('form').submit(function(e){
             e.preventDefault(); // prevents page reloading
             socket.emit('chat message', $('#m').val());
