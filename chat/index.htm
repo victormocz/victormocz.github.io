@@ -19,6 +19,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
         $(function () {
+        	var name = prompt("你的名字");
         	var connectionOptions =  {
             "force new connection" : true,
             "reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
@@ -29,7 +30,7 @@
 
           $('form').submit(function(e){
             e.preventDefault(); // prevents page reloading
-            socket.emit('chat message', $('#m').val());
+            socket.emit('chat message', name + ": " + $('#m').val());
             $('#m').val('');
             return false;
           });
